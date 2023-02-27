@@ -1,0 +1,74 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args)
+    {
+        System.out.println("Hello.\n Choose the algorithm you want to check:\n" +
+                " 1 - check the input number > '7';\n" +
+                " 2 - check the username is 'Вячеслав';\n" +
+                " 3 - check the array elements select");
+        Scanner  algorithm = new Scanner(System.in);
+        int task = algorithm.nextInt();
+
+
+        switch (task){
+
+
+            case 1:
+                //TASK #1
+                System.out.println("Enter a number: ");
+                Scanner variable = new Scanner(System.in);
+                double cinX = variable.nextDouble();
+                if (cinX > 7) {
+                    System.out.println("Привет! ");
+                } else {
+                    System.out.println("Error number.");
+                }
+                    main(args);
+                break;
+
+            case 2:
+                //TASK #2
+                System.out.println("Enter user name: ");
+
+                Scanner  userName = new Scanner(System.in);
+                String user_name = userName.nextLine();
+                if(user_name.equals("Вячеслав")){
+                    System.out.println("Привет, Вячеслав! ");
+                }
+                else {
+                    System.out.println("Нет такого имени.");
+                }
+                main(args);
+                break;
+
+            case 3:
+                //TASK #3
+                ArrayList<Double> numberToThree = new ArrayList<>();
+                System.out.println("Enter elements of array, for example: 1 12 33 4 5 ...\n" +
+                        "Press the 'Enter' to stop entering the array`s elements.\n");
+                Scanner  userArray = new Scanner(System.in);
+                String arrayNumber = userArray.nextLine();
+
+
+                double [] array = new double[ arrayNumber.split(" ").length];
+                System.out.println("The entered array:\n");
+                for (int i = 0; i < array.length; i++) {
+
+                    array[i] = Double.parseDouble(arrayNumber.split(" ")[i]);
+                    if(array[i] % 3 == 0){
+                        numberToThree.add(array[i]);
+                        }
+                    System.out.println(array[i]);
+                }
+
+                System.out.println("Array elements are multiples of three:\n" + numberToThree);
+                main(args);
+                break;
+
+            default:
+                System.out.println("Error algorithm number.");
+                break;
+        }
+    }
+}
