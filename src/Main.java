@@ -17,6 +17,9 @@ public class Main {
 
             case 1:
                 //TASK #1
+                //TASK #3
+                //try - perform the method;
+                //catch - process the error(invalid data is entered), show message and try to perform the method again.
                 try {
                     testTask.task_1();
                 } catch  (Exception errorNumber){
@@ -34,6 +37,8 @@ public class Main {
 
             case 3:
                 //TASK #3
+                //try - perform the method;
+                //catch - process the error(invalid data is entered), show message and try to perform the method again.
                 try {
                     testTask.task_3();
                 } catch  (Exception errorNumber){
