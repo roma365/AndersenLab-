@@ -1,0 +1,1 @@
+java -jar Shakhrai_TestTask_Java_11.jar
